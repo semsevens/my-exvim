@@ -118,8 +118,8 @@ else
     set background=dark
     set t_Co=256 " make sure our terminal use 256 color
     let g:solarized_termcolors = 256
+    colorscheme solarized
 endif
-colorscheme solarized
 " colorscheme exlightgray
 " colorscheme gruvbox
 
@@ -503,3 +503,4 @@ if filereadable(expand(vimrc_local_path))
 endif
 
 " vim:ts=4:sw=4:sts=4 et fdm=marker:
+

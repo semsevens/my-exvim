@@ -1,2 +1,12 @@
-" This file will be loaded at the end of .vimrc.
-" This file is designed to add your own vim scripts or override the exVim's .vimrc settings.
+" This file will be loaded at the end of .vimrc.  " This file is designed to add your own vim scripts or override the exVim's .vimrc settings.
+
+set tabstop=4                        "设置tab键为4个空格，
+set shiftwidth =4
+
+
+autocmd FileType html  set ts=2 sw=2
+autocmd FileType css  set ts=2 sw=2
+
+Plugin 'Chiel92/vim-autoformat'
+" Plugin 'nikvdp/ejs-syntax'
+" Plugin 'briancollins/vim-jst'

@@ -1,6 +1,90 @@
-" This file will be loaded after .vimrc.plugins, 
-" but before 'filetype plugin on', 'filetype indent on' and 'syntax on' been executed. 
+" This file will be loaded after .vimrc.plugins,
+" but before 'filetype plugin on', 'filetype indent on' and 'syntax on' been executed.
 " This file is designed to be safe to add your own plugins and plugins' configuration.
 
 " Add your customized plugins:
 " Example: Plugin 'foo/bar/foobar'
+
+" au BufRead,BufNewFile *.ejs setfiletype html
+
+" au BufRead,BufNewFile *.ejs setf javascript.jsx
+set clipboard=unnamedplus
+noremap <F3> :Autoformat<CR>
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
+let g:syntastic_html_checkers = []
+map <C-D> :NERDTreeToggle<CR>
+au BufRead,BufNewFile *.ejs setfiletype html
+
+
+
+" emmet
+
+let g:user_emmet_expandabbr_key = '<Tab>'
+let g:user_emmet_settings = {
+  \    'variables' : {
+  \    },
+  \    'html' : {
+  \        'filters' : 'html',
+  \        'indentation' : '  ',
+  \        'expandos' : {
+  \            'ol': 'ol>li',
+  \            'list': 'ul>li*3',
+  \        },
+  \        'default_attributes': {
+  \            'a': {'href': ''},
+  \            'link': [{'rel': 'stylesheet'}, {'href': ''}],
+  \        },
+  \        'aliases': {
+  \            'bq': 'blockquote',
+  \            'obj': 'object',
+  \            'src': 'source',
+  \        },
+  \        'empty_elements': 'area,base,basefont,...,isindex,link,meta,...',
+  \        'block_elements': 'address,applet,blockquote,...,li,link,map,...',
+  \        'inline_elements': 'a,abbr,acronym,...',
+  \        'empty_element_suffix': ' />',
+  \    },
+  \    'perl' : {
+  \        'indentation' : '  ',
+  \        'aliases' : {
+  \            'req' : "require '|'"
+  \        },
+  \        'snippets' : {
+  \            'use' : "use strict\nuse warnings\n\n",
+  \            'w' : "warn \"${cursor}\";",
+  \        },
+  \    },
+  \    '.ejs' : {
+  \        'indentation' : '  ',
+  \        'aliases' : {
+  \            'req' : "require '|'"
+  \        },
+  \        'snippets' : {
+  \            'use' : "use strict\nuse warnings\n\n",
+  \            'w' : "warn \"${cursor}\";",
+  \        },
+  \    },
+  \    'php' : {
+  \        'extends' : 'html',
+  \        'filters' : 'html,c',
+  \    },
+  \    'css' : {
+  \        'filters' : 'fc',
+  \    },
+  \    'javascript' : {
+  \        'snippets' : {
+  \            'jq' : "\\$(function() {\n\t${cursor}${child}\n});",
+  \            'jq:each' : "\\$.each(arr, function(index, item)\n\t${child}\n});",
+  \            'fn' : "(function() {\n\t${cursor}\n})();",
+  \            'tm' : "setTimeout(function() {\n\t${cursor}\n}, 100);",
+  \        },
+  \    },
+  \    'java' : {
+  \        'indentation' : '    ',
+  \        'snippets' : {
+  \            'main': "public static void main(String[] args) {\n\t|\n}",
+  \            'println': "System.out.println(\"|\");",
+  \            'class': "public class | {\n}\n",
+  \        },
+  \    },
+  \}
