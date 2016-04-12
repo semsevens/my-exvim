@@ -3,6 +3,7 @@
 set tabstop=4                        "设置tab键为4个空格，
 set shiftwidth =4
 
+vnoremap y "+yy
 
 autocmd FileType html  set ts=2 sw=2
 autocmd FileType css  set ts=2 sw=2

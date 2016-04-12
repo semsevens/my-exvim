@@ -8,7 +8,7 @@
 " au BufRead,BufNewFile *.ejs setfiletype html
 
 " au BufRead,BufNewFile *.ejs setf javascript.jsx
-set clipboard=unnamedplus
+set clipboard=unnamed
 noremap <F3> :Autoformat<CR>
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
 let g:syntastic_html_checkers = []
@@ -18,7 +18,7 @@ au BufRead,BufNewFile *.ejs setfiletype html
 
 
 " emmet
-
+" let g:user_emmet_leader_key='<C-E>'
 let g:user_emmet_expandabbr_key = '<Tab>'
 let g:user_emmet_settings = {
   \    'variables' : {
